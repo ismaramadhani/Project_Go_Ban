@@ -18,6 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
         echo json_encode(["error" => "Error: " . $conn->error]);
     }
 }
-
+console.log($_COOKIE);
 $conn->close();
 ?>
