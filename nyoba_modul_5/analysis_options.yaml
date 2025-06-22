@@ -3,3 +3,4 @@ analyzer:
   errors:
     unnecessary_const: ignore
     depend_on_referenced_packages: ignore
+
