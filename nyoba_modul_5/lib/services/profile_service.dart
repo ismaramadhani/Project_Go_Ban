@@ -11,6 +11,7 @@ class ProfileService {
   }) async {
     final uid = _auth.currentUser!.uid;
 
+    await _firestore.collection('{Profile}').doc(uid).set({
     await _firestore.collection('users').doc(uid).set({
       'username': username,
       'email': _auth.currentUser!.email,
@@ -20,17 +21,20 @@ class ProfileService {
 
   Future<DocumentSnapshot> getProfile() async {
     final uid = _auth.currentUser!.uid;
+    return _firestore.collection('{Profile}').doc(uid).get();
     return _firestore.collection('users').doc(uid).get();
   }
 
   Future<void> deleteProfile() async {
     final uid = _auth.currentUser!.uid;
+    await _firestore.collection('{Profile}').doc(uid).delete();
     await _firestore.collection('users').doc(uid).delete();
     await _auth.currentUser!.delete();
   }
 
   Future<void> updateEmail(String newEmail) async {
     await _auth.currentUser!.updateEmail(newEmail);
+    await _firestore.collection('{Profile}').doc(_auth.currentUser!.uid).update({
     await _firestore.collection('users').doc(_auth.currentUser!.uid).update({
       'email': newEmail,
     });

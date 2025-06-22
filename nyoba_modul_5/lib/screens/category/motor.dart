@@ -32,6 +32,7 @@ class _MotorPageState extends State<MotorPage> {
     });
 
     final response = await http.get(
+      Uri.parse('http://192.168.1.7/goban_project/get.php'),
       Uri.parse('http://192.168.1.20/goban_project/get.php'),
     );
 
@@ -56,6 +57,7 @@ class _MotorPageState extends State<MotorPage> {
   // Fungsi untuk menambahkan pesanan
   addOrder() async {
     final response = await http.post(
+      Uri.parse('http://192.168.1.7/goban_project/post.php'),
       Uri.parse('http://192.168.1.20/goban_project/post.php'),
       body: {
         'user_id': '1',
@@ -91,6 +93,7 @@ class _MotorPageState extends State<MotorPage> {
   // Fungsi untuk memperbarui status pesanan
   updateOrderStatus(int id, String status) async {
     final response = await http.put(
+      Uri.parse('http://192.168.1.7/goban_project/put.php'),
       Uri.parse('http://192.168.1.20/goban_project/put.php'),
       body: {'id': id.toString(), 'status': status},
     );
@@ -105,6 +108,7 @@ class _MotorPageState extends State<MotorPage> {
   // Fungsi untuk menghapus pesanan
   deleteOrder(int id) async {
     final response = await http.delete(
+      Uri.parse('http://192.168.1.7/goban_project/delete.php'),
       Uri.parse('http://192.168.1.20/goban_project/delete.php'),
       body: {'id': id.toString()},
     );

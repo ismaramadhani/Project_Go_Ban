@@ -9,6 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  firebase_core: ^3.13.1
+  firebase_auth: ^5.5.4
+  cloud_firestore: ^5.6.8
   firebase_core: ^2.32.0
   firebase_auth: ^4.16.0
   cloud_firestore: ^4.8.0
@@ -16,6 +19,26 @@ dependencies:
   salomon_bottom_bar: ^3.3.2
   google_sign_in: ^6.3.0
   google_sign_in_web: ^0.12.4+4 # atau versi terkini
+  flutter_facebook_auth: ^7.1.2
+  firebase_storage: ^12.4.7
+  image_picker: ^1.1.2
+  lottie: ^3.3.1
+  http: ^1.4.0
+  google_fonts: ^6.2.1
+  flashy_tab_bar2: ^0.0.10
+  intro_slider: ^4.2.1
+  shared_preferences: ^2.5.3
+  intl: ^0.20.2
+  geocoding: ^4.0.0
+  permission_handler: ^12.0.0+1
+  cloudinary_dart: ^0.0.11
+  flutter_dotenv: ^5.2.1
+  image: ^4.5.4
+  dio: ^5.8.0+1
+  # flutter_local_notifications: ^19.2.1
+  timezone: ^0.10.1
+  awesome_notifications: ^0.10.1
+  connectivity_plus: ^6.1.4
   flutter_facebook_auth: ^6.0.2
   firebase_storage: ^11.2.0
   image_picker: ^1.0.4
@@ -27,6 +50,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+  place_picker_google: ^0.0.6 
+  # firebase_auth: ^5.5.4
+  google_maps_flutter: ^2.1.1 
   flutter_lints: ^5.0.0
   flutter_launcher_icons: ^0.13.1
 
@@ -44,7 +72,16 @@ flutter:
     - assets/icon/lokasi.json
     - assets/icon/loading.json
     - assets/fonts/Hello-Botuna.ttf
+    - assets/animations/loading.json
+    - assets/animations/onboarding1.json
+    - assets/animations/onboarding2.json
+    - assets/animations/onboarding3.json
+    - assets/animations/
+    - .env
 
+fonts:
+  - family: Poppins
+  # - family: HelloBotuna
 fonts:
   - family: Poppins
   - family: HelloBotuna
@@ -55,6 +92,9 @@ fonts:
         weight: 600
       - asset: assets/fonts/Poppins-Regular.ttf
         weight: 400
+      - asset: assets/fonts/Poppins-Medium.ttf
+        weight: 500
+      # - asset: assets/fonts/Hello-Botuna.ttf
       - asset: assets/fonts/Hello-Botuna.ttf
 
 flutter_launcher_icons:

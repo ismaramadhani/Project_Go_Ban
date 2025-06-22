@@ -14,6 +14,17 @@
       },
       "oauth_client": [
         {
+
+          "client_id": "475941342310-0aamqfro6maumk0pr8o613efld59si27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nyoba_modul_5",
+            "certificate_hash": "373a65e8b65cb593d408d8f29f3cf3d6509052cd"
+          }
+        },
+        {
+
+
           "client_id": "475941342310-0srr90qk2d1f4jrts4ddfi90lv6d4psk.apps.googleusercontent.com",
           "client_type": 3
         }
